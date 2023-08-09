@@ -36,7 +36,7 @@ public class StudentDao {
 
 			Connection con = StudentDao.getConnection();
 			PreparedStatement ps = con
-					.prepareStatement("insert into students(name,password,email,country) values (?,?,?,?)");
+					.prepareStatement("insert into Student(name,password,email,country) values (?,?,?,?)");
 
 			ps.setString(1, st.getName());
 			ps.setString(2, st.getPassword());
@@ -61,7 +61,7 @@ public class StudentDao {
 		try {
 
 			Connection con = StudentDao.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from students");
+			PreparedStatement ps = con.prepareStatement("select * from Student");
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
@@ -96,7 +96,7 @@ public class StudentDao {
 		try {
 
 			Connection con = StudentDao.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from students where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from Student where id=?");
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 
@@ -127,7 +127,7 @@ public class StudentDao {
 		try {
 			Connection con = StudentDao.getConnection();
 			PreparedStatement ps = con
-					.prepareStatement("update students set name=?,password=?,email=?,country=? where id=?");
+					.prepareStatement("update Student set name=?,password=?,email=?,country=? where id=?");
 			ps.setString(1, st.getName());
 			ps.setString(2, st.getPassword());
 			ps.setString(3, st.getEmail());
@@ -151,7 +151,7 @@ public class StudentDao {
 		int status = 0;
 		try {
 			Connection con = StudentDao.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from students where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from Student where id=?");
 			ps.setInt(1, id);
 			status = ps.executeUpdate();
 
