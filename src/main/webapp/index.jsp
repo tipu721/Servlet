@@ -1,46 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Add Student</title>
+	<meta charset="ISO-8859-1">
+	<title>Add Student</title>
 </head>
 <body>
 
-	<h1>Add New Student</h1>
-	<form action="SaveServlet" method="post">
-		<table>
+<<form action="/register" method="post">
 
-			<tr>
-				<td>Name:</td>
-				<td><input type="text" name="name" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr>
-				<td>Email:</td>
-				<td><input type="email" name="email" /></td>
-			</tr>
-			<tr>
-				<td>Country:</td>
-				<td><select name="country" style="width: 150px">
-						<option>Bangladesh</option>
-						<option>India</option>
-						<option>UK</option>
-						<option>Other</option>
-				</select></td>
-			</tr>
+	Name:<input type="text" name="userName"/><br/><br/>
+	Password:<input type="password" name="userPass"/><br/><br/>
+	Email Id:<input type="text" name="userEmail"/><br/><br/>
+	Country:
+	<select name="userCountry">
+		<option>India</option>
+		<option>Pakistan</option>
+		<option>other</option>
+	</select>
 
-			<tr>
-				<td><input type="submit" value="Save Student" /></td>
-			</tr>
+	<br/><br/>
+	<input type="submit" value="register"/>
 
-		</table>
-	</form>
-
-	<br />
-	<a href="ViewServlet">view employees</a>
+</form>
 
 </body>
 </html>
