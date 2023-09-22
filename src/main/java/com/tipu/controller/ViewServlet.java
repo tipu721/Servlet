@@ -23,6 +23,8 @@ public class ViewServlet extends HttpServlet {
 		out.println("<a href='index.jsp'>Add New Student </a>");
 		out.println("<h1>Student List</h1>");
 
+
+
 		List<Student> list = StudentDao.getAllStudent();
 		out.print("<table border='1' width='100' ");
 

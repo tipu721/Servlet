@@ -89,6 +89,29 @@ public class StudentDao {
 		return list;
 	}
 
+	public static List<Student> getRecords(Integer total, Integer start) throws SQLException {
+
+		List<Student> studentList = new ArrayList<>();
+		Connection connection = StudentDao.getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement("select * from student limit total offset start");
+		ResultSet resultSet = preparedStatement.executeQuery();
+		while (resultSet.next()) {
+
+			Student st = new Student();
+
+			st.setId(resultSet.getInt(1));
+			st.setName(resultSet.getString(2));
+			st.setPassword(resultSet.getString(3));
+			st.setEmail(resultSet.getString(4));
+			st.setCountry(resultSet.getString(5));
+
+			studentList.add(st);
+
+		}
+		return studentList;
+
+	}
+
 	public static Student getStudentById(int id) {
 
 		Student st = new Student();
