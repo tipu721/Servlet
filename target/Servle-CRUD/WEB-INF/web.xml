@@ -5,28 +5,4 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <listener>
-    <listener-class>com.tipu.controller.MyListener</listener-class>
-  </listener>
-
-  <servlet>
-    <servlet-name>MyServlet1</servlet-name>
-    <servlet-class>com.tipu.controller.MyServlet1</servlet-class>
-
-  </servlet>
-  <servlet>
-    <servlet-name>MyServlet2</servlet-name>
-    <servlet-class>com.tipu.controller.MyServlet2</servlet-class>
-
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>MyServlet1</servlet-name>
-    <url-pattern>/servlet1</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>MyServlet2</servlet-name>
-    <url-pattern>/servlet2</url-pattern>
-  </servlet-mapping>
-
 </web-app>
